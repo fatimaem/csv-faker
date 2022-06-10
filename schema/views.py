@@ -66,7 +66,7 @@ def create_dataset(request):
         schema = Schema.objects.filter(id=schema_id).first()
         filename = str(schema.name) + '_' + \
             str(datetime.datetime.today().strftime('%Y-%m-%d_%H-%M-%S')) + '.csv'
-        filepath = f'{MEDIA_ROOT}\\{filename}'
+        filepath = f'{MEDIA_ROOT}//{filename}'
         dataset = Dataset(
             schema_id=schema_id,
             file_name=filename,
